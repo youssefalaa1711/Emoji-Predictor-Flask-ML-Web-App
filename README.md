@@ -8,7 +8,7 @@ This is a simple Flask web app that predicts an emoji based on a person's **age*
 - The backend uses a Decision Tree model to predict the appropriate emoji
 
 ## 🖼 Web Interface Preview
-![Web UI](static/images/demo_ui.png)
+![Web UI](images/img1.png)
 
 
 ## 📌 Requirements
