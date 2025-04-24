@@ -17,5 +17,3 @@ This is a simple Flask web app that predicts an emoji based on a person's **age*
 - pandas
 - joblib
 
-Enjoy building with emojis! 😊
-"# Emoji-Predictor-Flask-ML-Web-App" 
