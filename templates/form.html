@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Emoji Prediction</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            text-align: center;
+            padding: 50px;
+        }
+
+        form {
+            background-color: white;
+            padding: 20px;
+            border-radius: 8px;
+            display: inline-block;
+        }
+
+        label {
+            margin: 10px;
+            font-size: 1.2em;
+        }
+
+        input[type=range], input[type=radio], button {
+            margin: 10px;
+        }
+
+        button {
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            padding: 10px 20px;
+            font-size: 1.2em;
+        }
+
+        button:hover {
+            background-color: #45a049;
+        }
+
+        output {
+            font-weight: bold;
+            padding: 0 10px;
+        }
+
+        h2 {
+            color: #333;
+        }
+    </style>
+</head>
+<body>
+    <h1>🚀 Emoji Prediction</h1>
+    <form action="/predict" method="post">
+        <label for="age">Age:</label>
+        <input type="range" id="age" name="age" min="1" max="100" value="20" oninput="ageOutput.value = age.value">
+        <output name="ageOutput" id="ageOutput">20</output><br>
+
+        <label>Gender:</label>
+        <input type="radio" id="male" name="gender" value="1" required>
+        <label for="male">Male</label>
+        <input type="radio" id="female" name="gender" value="0" required>
+        <label for="female">Female</label><br>
+
+        <button type="submit">Predict</button>
+    </form>
+
+    {% if prediction %}
+    <h2>Predicted Emoji: {{ prediction }}</h2>
+    {% endif %}
+</body>
+</html>
